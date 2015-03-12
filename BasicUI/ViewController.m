@@ -11,8 +11,8 @@
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UITextField * nameField;
 @property (nonatomic, weak) IBOutlet UITextField * numberField;
-@property (nonatomic, weak) IBOutlet UISlider * theSlider;
-@property (nonatomic, weak) IBOutlet UILabel * sliderLabel;
+@property (nonatomic, weak) IBOutlet UISlider * mySlider;
+@property (nonatomic, weak) IBOutlet UILabel * sLabel;
 @end
 
 @implementation ViewController
@@ -28,7 +28,7 @@
     [self.numberField resignFirstResponder];
 }
 
--(IBAction) sliderKnobChanged:(id)sender
+-(IBAction) sliderChanged:(id)sender
 {
     // Method 1 - use theSlider pointer to access value from slider
     int progressAsInt = (int)(self.theSlider.value + 0.5);
